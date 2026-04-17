@@ -22,6 +22,15 @@ public class Pessoa {
 
     }
 
+    //se x.equals(y) == true, y.hashCode() == x.hashCode()
+    // y.hashCode() == x.hashCode nao sera y.equals(x) tem q ser T
+    // x.equals(y) == false
+    // y.hashCode() != x.hashCode() x.equls(y) devera ser F
+    @Override
+    public int hashCode() {
+        return nome == null ? 0 : this.nome.hashCode();
+    }
+
     public String getNome() {
         return nome;
     }

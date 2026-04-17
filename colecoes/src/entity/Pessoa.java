@@ -15,7 +15,7 @@ public class Pessoa {
     public boolean equals(Object obj) {
         if(obj == null)return  false;
         if (this == obj) return true;
-        if (getClass() != obj.getClass()) return false;
+        if (this.getClass() != obj.getClass()) return false;
 
         Pessoa pessoa = (Pessoa) obj;
         return nome != null && nome.equals(pessoa.nome);
@@ -29,6 +29,14 @@ public class Pessoa {
     @Override
     public int hashCode() {
         return nome == null ? 0 : this.nome.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", nomeFull='" + nomeFull + '\'' +
+                '}';
     }
 
     public String getNome() {

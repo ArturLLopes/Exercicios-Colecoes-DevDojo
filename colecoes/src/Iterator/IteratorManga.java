@@ -4,11 +4,12 @@ import entity.Manga;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IteratorManga {
     public static void main(String[] args) {
-        List<Manga> mangas = new ArrayList<>();
+        List<Manga> mangas = new LinkedList<>();
         mangas.add(new Manga(5L,"Hellsing", 19.9, 0));
         mangas.add(new Manga(1L,"Breserkk", 9.9, 5));
         mangas.add(new Manga(3L,"Pokemon", 190.9, 0));
